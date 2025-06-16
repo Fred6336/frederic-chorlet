@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frédéric Chorlet - Hypnothérapeute à Clermont-Ferrand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2b6cb0',
+                        accent: '#9f7aea',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <header class="fixed w-full z-50">
+        <nav class="bg-white shadow-lg transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-20">
+                    <div class="flex items-center">
+                        <a href="#" class="flex items-center">
+                            <span class="text-2xl font-bold text-primary">Frédéric Chorlet</span>
+                            <span class="ml-2 text-sm text-accent">Hypnothérapie</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-10">
+                        <a href="#accueil" class="text-gray-600 hover:text-accent font-medium transition-colors">Accueil</a>
+                        <a href="#apropos" class="text-gray-600 hover:text-accent font-medium transition-colors">À propos</a>
+                        <a href="#services" class="text-gray-600 hover:text-accent font-medium transition-colors">Services</a>
+                        <a href="#temoignages" class="text-gray-600 hover:text-accent font-medium transition-colors">Témoignages</a>
+                        <a href="#contact" class="px-4 py-2 bg-accent text-white rounded-full font-medium hover:bg-primary transition-all">Contact</a>
+                    </div>
+                    <div class="md:hidden flex items-center">
+                        <button id="menu-toggle" class="text-gray-700">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+                <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                    <a href="#accueil" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-primary">Accueil</a>
+                    <a href="#apropos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-primary">À propos</a>
+                    <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-primary">Services</a>
+                    <a href="#temoignages" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-primary">Témoignages</a>
+                    <a href="#contact" class="block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-accent text-white">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="pt-24 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-primary to-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-10 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        Libérez votre plein <span class="text-accent">potentiel</span>
+                    </h1>
+                    <p class="mt-6 text-xl font-light opacity-90">
+                        Hypnothérapie sur mesure à Clermont-Ferrand avec Frédéric Chorlet, Praticien et Maître Praticien en hypnose
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="px-8 py-4 bg-accent text-white text-lg font-medium rounded-full hover:bg-purple-800 transition-colors shadow-lg text-center">Prendre rendez-vous</a>
+                        <a href="#services" class="px-8 py-4 bg-white text-primary text-lg font-medium rounded-full hover:bg-gray-100 transition-colors shadow-lg text-center">Découvrir mes services</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96"></div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-accent p-5 rounded-xl shadow-xl">
+                        <p class="font-bold text-lg">Diplômes & Qualifications</p>
+                        <p class="mt-2 font-medium">Praticien & Maître Praticien Hypnose</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto">
+                <span class="text-accent font-medium">À propos de moi</span>
+                <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">Frédéric Chorlet</h2>
+                <p class="mt-6 text-xl text-gray-600 font-serif">Votre guide vers le bien-être et l'épanouissement personnel</p>
+            </div>
+            
+            <div class="mt-16 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+                    <div class="relative">
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96"></div>
+                        <div class="absolute -inset-5 border-2 border-accent rounded-xl"></div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-900">Mon parcours</h3>
+                    <p class="mt-6 text-gray-600 leading-relaxed">
+                        Je m'appelle Frédéric Chorlet, hypnothérapeute diplômé et passionné par les capacités extraordinaires de l'esprit humain. Après de nombreuses années à accompagner les personnes dans leur développement personnel, j'ai choisi de me spécialiser dans les techniques d'hypnose pour offrir un accompagnement plus profond et plus efficace.
+                    </p>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Titulaire du diplôme de Praticien en Hypnose puis de Maître Praticien, j'ai suivi une formation rigoureuse auprès des plus grands spécialistes en France. Mon approche intègre les dernières avancées en neuroscience et en psychologie pour vous aider à surmonter les défis personnels et professionnels.
+                    </p>
+                    
+                    <div class="mt-10 grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-primary bg-opacity-10 rounded-full">
+                                <i class="fas fa-brain text-accent text-xl"></i>
+                            </div>
+                            <span class="ml-3 font-medium">Praticien certifié</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="p-3 bg-primary bg-opacity-10 rounded-full">
+                                <i class="fas fa-graduation-cap text-accent text-xl"></i>
+                            </div>
+                            <span class="ml-3 font-medium">Maître praticien</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="p-3 bg-primary bg-opacity-10 rounded-full">
+                                <i class="fas fa-hand-holding-heart text-accent text-xl"></i>
+                            </div>
+                            <span class="ml-3 font-medium">Approche bienveillante</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="p-3 bg-primary bg-opacity-10 rounded-full">
+                                <i class="fas fa-map-marker-alt text-accent text-xl"></i>
+                            </div>
+                            <span class="ml-3 font-medium">Clermont-Ferrand</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#services" class="mt-10 inline-flex items-center px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-gray-900 transition-colors">
+                        Découvrir mes services
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-accent font-medium">Domaines d'intervention</span>
+                <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">Services d'hypnothérapie</h2>
+                <p class="mt-6 text-gray-600">Je vous accompagne sur différents aspects de votre vie grâce à l'hypnose</p>
+            </div>
+            
+            <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 bg-gradient-to-r from-primary to-secondary relative">
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-lg rounded-full p-3">
+                            <i class="fas fa-calendar-check text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-gray-900">Gestion du stress</h3>
+                        <p class="mt-4 text-gray-600">Apprenez à maîtriser votre anxiété et à retrouver un équilibre émotionnel durable grâce à des techniques hypnotiques adaptées.</p>
+                        <a href="#" class="mt-6 inline-flex items-center text-accent font-medium hover:text-purple-800 transition-colors">
+                            En savoir plus
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 bg-gradient-to-r from-secondary to-accent relative">
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-lg rounded-full p-3">
+                            <i class="fas fa-bed text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-gray-900">Troubles du sommeil</h3>
+                        <p class="mt-4 text-gray-600">Retrouvez des nuits paisibles et réparatrices grâce à des protocoles spécifiques pour combattre l'insomnie et améliorer la qualité de votre sommeil.</p>
+                        <a href="#" class="mt-6 inline-flex items-center text-accent font-medium hover:text-purple-800 transition-colors">
+                            En savoir plus
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 bg-gradient-to-r from-accent to-purple-500 relative">
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-lg rounded-full p-3">
+                            <i class="fas fa-ban-smoking text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-gray-900">Arrêt du tabac</h3>
+                        <p class="mt-4 text-gray-600">Libérez-vous définitivement de la cigarette avec un accompagnement sur mesure pour modifier durablement votre comportement.</p>
+                        <a href="#" class="mt-6 inline-flex items-center text-accent font-medium hover:text-purple-800 transition-colors">
+                            En savoir plus
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-secondary relative">
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-lg rounded-full p-3">
+                            <i class="fas fa-weight text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-gray-900">Gestion du poids</h3>
+                        <p class="mt-4 text-gray-600">Renouez avec une relation saine avec votre alimentation en travaillant sur les mécanismes inconscients de vos habitudes.</p>
+                        <a href="#" class="mt-6 inline-flex items-center text-accent font-medium hover:text-purple-800 transition-colors">
+                            En savoir plus
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 bg-gradient-to-r from-primary to-gray-800 relative">
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-lg rounded-full p-3">
+                            <i class="fas fa-chart-line text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-gray-900">Confiance en soi</h3>
+                        <p class="mt-4 text-gray-600">Développez une estime de soi solide et une confiance inébranlable pour réaliser vos projets personnels et professionnels.</p>
+                        <a href="#" class="mt-6 inline-flex items-center text-accent font-medium hover:text-purple-800 transition-colors">
+                            En savoir plus
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 relative">
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-lg rounded-full p-3">
+                            <i class="fas fa-dumbbell text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-gray-900">Performance sportive</h3>
+                        <p class="mt-4 text-gray-600">Optimisez vos performances, dépassez vos limites et apprenez à gérer la pression lors des compétitions.</p>
+                        <a href="#" class="mt-6 inline-flex items-center text-accent font-medium hover:text-purple-800 transition-colors">
+                            En savoir plus
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="temoignages" class="py-20 bg-gradient-to-br from-primary to-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-accent font-medium">Témoignages</span>
+                <h2 class="mt-2 text-3xl md:text-4xl font-bold">Ce que disent mes clients</h2>
+                <p class="mt-6 opacity-90">Des retours authentiques de personnes que j'ai accompagnées</p>
+            </div>
+            
+            <div class="mt-16 grid md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic">"Après seulement trois séances avec Frédéric, j'ai enfin réussi à arrêter de fumer après 15 ans de tabagisme. Son approche est douce et efficace. Je recommande vivement !"</p>
+                    <div class="mt-6 flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+                        <div>
+                            <p class="font-bold">Sophie T.</p>
+                            <p class="text-sm opacity-75">Clermont-Ferrand</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic">"Frédéric m'a aidée à gérer mon stress chronique et à retrouver confiance en moi. J'ai pu ainsi évoluer professionnellement et obtenir la promotion que j'attendais depuis si longtemps."</p>
+                    <div class="mt-6 flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+                        <div>
+                            <p class="font-bold">Marc L.</p>
+                            <p class="text-sm opacity-75">Riom</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic">"Grâce à l'hypnose, j'ai pu enfin retrouver un sommeil réparateur après des années d'insomnies. Frédéric est un thérapeute compétent et à l'écoute."</p>
+                    <div class="mt-6 flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+                        <div>
+                            <p class="font-bold">Émilie R.</p>
+                            <p class="text-sm opacity-75">Cournon-d'Auvergne</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-accent font-medium">Prendre rendez-vous</span>
+                <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">Contactez-moi</h2>
+                <p class="mt-6 text-gray-600">Discutons de vos besoins et fixons un premier rendez-vous</p>
+            </div>
+            
+            <div class="mt-16 flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 lg:pr-12">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Adresse email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Téléphone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+                            <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors">
+                                <option>Gestion du stress</option>
+                                <option>Arrêt du tabac</option>
+                                <option>Sommeil</option>
+                                <option>Confiance en soi</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full px-6 py-4 bg-accent text-white text-lg font-medium rounded-lg hover:bg-purple-800 transition-colors">Envoyer mon message</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2 mt-10 lg:mt-0">
+                    <div class="bg-primary bg-opacity-5 p-10 rounded-xl h-full">
+                        <h3 class="text-2xl font-bold text-gray-900">Informations pratiques</h3>
+                        <p class="mt-6 text-gray-700">Mon cabinet d'hypnothérapie est situé à Clermont-Ferrand, facilement accessible depuis tout le département du Puy-de-Dôme.</p>
+                        
+                        <div class="mt-10 space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-full">
+                                    <i class="fas fa-map-marker-alt text-accent text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-gray-900">Adresse</h4>
+                                    <p class="mt-1 text-gray-700">15 Rue du Docteur Bousquet<br>63000 Clermont-Ferrand</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-full">
+                                    <i class="fas fa-phone-alt text-accent text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-gray-900">Téléphone</h4>
+                                    <p class="mt-1 text-gray-700">06 12 34 56 78</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-full">
+                                    <i class="fas fa-clock text-accent text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-gray-900">Horaires</h4>
+                                    <p class="mt-1 text-gray-700">Lundi - Vendredi : 9h - 20h<br>Samedi : 9h - 13h<br>Fermé le dimanche</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 rounded-xl overflow-hidden shadow-lg">
+                            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-white text-lg font-bold">Frédéric Chorlet</h4>
+                    <p class="mt-4">Hypnothérapeute diplômé à Clermont-Ferrand, je vous accompagne vers un épanouissement personnel et professionnel.</p>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-bold">Navigation</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#accueil" class="hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="#apropos" class="hover:text-white transition-colors">À propos</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#temoignages" class="hover:text-white transition-colors">Témoignages</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-bold">Services</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">Gestion du stress</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Troubles du sommeil</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Arrêt du tabac</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Confiance en soi</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Performance sportive</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-bold">Contact</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
+                            <span>15 Rue du Docteur Bousquet, 63000 Clermont-Ferrand</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-accent"></i>
+                            <span>06 12 34 56 78</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mt-1 mr-3 text-accent"></i>
+                            <span>contact@fredericchorlet-hypnotherapie.fr</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2023 Frédéric Chorlet - Hypnothérapeute. Tous droits réservés.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white mr-6 transition-colors">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-10 right-10 p-3 bg-accent text-white rounded-full shadow-lg hidden hover:bg-purple-800 transition-colors">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form submission
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Votre message a été envoyé ! Je vous recontacterai très rapidement.');
+                form.reset();
+            });
+        }
+    </script>
+</body>
+</html>
